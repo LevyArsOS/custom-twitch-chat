@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Live Configurator (GitHub Pages)
+    url: https://levyarsos.github.io/custom-twitch-chat/
+    about: Open the hosted overlay configurator

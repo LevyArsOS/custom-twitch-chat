@@ -1,6 +1,7 @@
 {
   "name": "custom-twitch-chat",
   "version": "0.1.0",
+  "license": "MIT",
   "private": true,
   "description": "Customizable Twitch chat overlay generator and runtime for OBS",
   "type": "module",
