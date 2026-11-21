@@ -1,0 +1,19 @@
+name: Feature Request
+description: Suggest a new customization option, event, or improvement
+title: "[Feat]: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or need
+      description: What are you trying to achieve in your stream overlay?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: Describe how you expect this option or behavior to work.
+    validations:
+      required: true
