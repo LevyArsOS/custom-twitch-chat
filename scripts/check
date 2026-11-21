@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+ROOT="$(cd "$(dirname "$0")/.." && pwd)"
+cd "$ROOT"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+
+for candidate in "$ROOT/../ai-workspace/lib/content_scan.py" "$ROOT/../../lib/content_scan.py"; do
+  if [ -f "$candidate" ]; then
+    python3 "$candidate" tree HEAD
+    break
+  fi
+done
+
+npm run test:coverage
+
+if [ -f src/overlay/main.js ] && [ -f index.html ]; then
+  npm run build
+fi
