@@ -67,6 +67,16 @@ export function createSimulator({ onIrcMessage, onEventSub }) {
         user_name: 'NewFollower',
       });
     },
+    testHighlight(channel = 'demo') {
+      return emitIrc(
+        `@badges=subscriber/6;color=#BF94FF;display-name=HighlightedUser;id=${nextId()};msg-id=highlighted-message;user-id=1010 :highlighteduser!highlighteduser@highlighteduser.example.com PRIVMSG #${channel} :Look at this highlighted message!`
+      );
+    },
+    testFirstMsg(channel = 'demo') {
+      return emitIrc(
+        `@badges=;color=#00D26A;display-name=FirstChatter;first-msg=1;id=${nextId()};user-id=1011 :firstchatter!firstchatter@firstchatter.example.com PRIVMSG #${channel} :Hello! First time chatting here!`
+      );
+    },
     testDelete(channel = 'demo') {
       return emitIrc(`@target-msg-id=sim-${seq} :tmi.twitch.tv CLEARMSG #${channel} :deleted`);
     },

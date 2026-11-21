@@ -10,6 +10,8 @@ const SIM_ACTIONS = [
   ['simRaid', 'testRaid'],
   ['simStreak', 'testWatchStreak'],
   ['simFollow', 'testFollow'],
+  ['simHighlight', 'testHighlight'],
+  ['simFirstMsg', 'testFirstMsg'],
   ['simDelete', 'testDelete'],
   ['simClear', 'testClear'],
 ];
