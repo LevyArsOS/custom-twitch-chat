@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Twitch Chat</title>
+  <link rel="stylesheet" href="./src/generator/generator.css">
+</head>
+<body>
+  <header class="ctc-topbar">
+    <div>
+      <h1 id="ctc-title">Custom Twitch Chat</h1>
+      <p id="ctc-subtitle"></p>
+    </div>
+    <div class="ctc-toolbar">
+      <label for="ctc-preset-select" id="ctc-preset-label"></label>
+      <select id="ctc-preset-select" class="ctc-select" style="width:auto">
+        <option value="default">Default</option>
+        <option value="peneku">Peneku Chat</option>
+        <option value="minimal">Minimal</option>
+      </select>
+      <button type="button" id="ctc-reset-btn" class="ctc-btn"></button>
+      <button type="button" id="ctc-relogin-btn" class="ctc-btn"></button>
+    </div>
+  </header>
+
+  <main class="ctc-layout">
+    <aside id="ctc-form-root" class="ctc-sidebar"></aside>
+    <section class="ctc-main">
+      <div id="ctc-preview-root" class="ctc-panel"></div>
+
+      <div class="ctc-panel">
+        <h2 id="ctc-export-title" style="margin:0 0 8px;font-size:15px"></h2>
+        <div class="ctc-btn-row">
+          <button type="button" id="ctc-copy-url" class="ctc-btn ctc-btn-primary"></button>
+          <button type="button" id="ctc-dl-html" class="ctc-btn"></button>
+          <button type="button" id="ctc-dl-zip" class="ctc-btn"></button>
+          <button type="button" id="ctc-dl-json" class="ctc-btn"></button>
+        </div>
+        <div id="ctc-export-status" class="ctc-status"></div>
+        <details style="margin-top:8px">
+          <summary id="ctc-obs-title" style="cursor:pointer;font-size:12px"></summary>
+          <p id="ctc-obs-body" style="font-size:12px;color:var(--muted);margin:6px 0 0"></p>
+        </details>
+      </div>
+
+      <div class="ctc-panel">
+        <h2 id="ctc-import-title" style="margin:0 0 8px;font-size:15px"></h2>
+        <textarea id="ctc-import-text" class="ctc-textarea" rows="3"></textarea>
+        <div class="ctc-btn-row">
+          <button type="button" id="ctc-import-btn" class="ctc-btn"></button>
+          <input type="file" id="ctc-import-file" accept=".json,.html,.htm" hidden>
+          <button type="button" id="ctc-import-file-btn" class="ctc-btn"></button>
+        </div>
+        <div id="ctc-import-status" class="ctc-status"></div>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="./src/generator/main.js"></script>
+</body>
+</html>
