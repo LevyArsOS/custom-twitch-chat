@@ -11,7 +11,7 @@ export function createIrcClient({
   setTimeoutImpl = (fn, ms) => setTimeout(fn, ms),
   clearTimeoutImpl = (id) => clearTimeout(id),
 } = {}) {
-  let currentChannel = String(channel).replace(/^[@#\s]+/, '').toLowerCase();
+  let currentChannel = String(channel).trim().replace(/^[@#\s]+/, '').toLowerCase();
   let ws = null;
   let stopped = false;
   let attempt = 0;
@@ -92,7 +92,7 @@ export function createIrcClient({
   }
 
   function setChannel(nextChannel) {
-    const clean = String(nextChannel || '').replace(/^[@#\s]+/, '').toLowerCase();
+    const clean = String(nextChannel || '').trim().replace(/^[@#\s]+/, '').toLowerCase();
     if (clean === currentChannel) return;
     if (ws && ws.readyState === 1 && currentChannel) {
       send(`PART #${currentChannel}`);
