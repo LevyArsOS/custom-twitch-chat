@@ -13,10 +13,21 @@ export function createAuthPanel({
     const qr = qrcode(0, 'M');
     qr.addData(url);
     qr.make();
-    const svgMarkup = qr.createSvgTag(4, 0);
-    const parser = new DOMParser();
-    const svgDoc = parser.parseFromString(svgMarkup, 'image/svg+xml');
-    return doc.importNode(svgDoc.documentElement, true);
+    const count = qr.getModuleCount();
+    const ns = 'http://www.w3.org/2000/svg';
+    const svg = doc.createElementNS(ns, 'svg');
+    svg.setAttribute('viewBox', `0 0 ${count} ${count}`);
+    let d = '';
+    for (let r = 0; r < count; r += 1) {
+      for (let c = 0; c < count; c += 1) {
+        if (qr.isDark(r, c)) d += `M${c},${r}h1v1h-1z`;
+      }
+    }
+    const path = doc.createElementNS(ns, 'path');
+    path.setAttribute('d', d);
+    path.setAttribute('fill', '#000');
+    svg.appendChild(path);
+    return svg;
   }
 
   function show({ userCode, verificationUri }) {
