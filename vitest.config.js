@@ -7,6 +7,7 @@ export default defineConfig({
       happyDOM: {
         settings: {
           disableCSSFileLoading: true,
+          disableIframePageLoading: true,
           handleDisabledFileLoadingAsSuccess: true,
         },
       },
