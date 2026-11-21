@@ -1,0 +1,28 @@
+{
+  "name": "custom-twitch-chat",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Customizable Twitch chat overlay generator and runtime for OBS",
+  "type": "module",
+  "scripts": {
+    "build:runtime": "vite build -c vite.runtime.config.js",
+    "dev:runtime": "vite build -c vite.runtime.config.js --watch",
+    "dev": "npm run build:runtime && vite",
+    "build": "npm run build:runtime && vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "bench": "vitest bench --run"
+  },
+  "dependencies": {
+    "jszip": "^3.10.1",
+    "qrcode-generator": "^1.4.4"
+  },
+  "devDependencies": {
+    "@vitest/coverage-v8": "^4.1.12",
+    "fast-check": "^3.23.1",
+    "happy-dom": "^15.11.7",
+    "vite": "^6.4.1",
+    "vitest": "^4.1.12"
+  }
+}
