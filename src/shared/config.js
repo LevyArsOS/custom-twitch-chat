@@ -34,7 +34,7 @@ function coerceFieldValue(field, value) {
 
   if (typeof value === 'string' || typeof value === 'number') {
     const str = String(value);
-    return field.key === 'channel' ? str.trim().replace(/^[#@]+/, '').toLowerCase() : str;
+    return field.key === 'channel' ? str.replace(/^[\s#@]+/, '').trim().toLowerCase() : str;
   }
 
   return field.default;
