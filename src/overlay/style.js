@@ -53,6 +53,15 @@ export function applyOverlayStyles(doc, config) {
   setBoxVars(root, '--ctc-user', 'userName', config);
   setBoxVars(root, '--ctc-text', 'text', config);
 
+  root.setProperty('--ctc-sub-color', config.subColor);
+  root.setProperty('--ctc-cheer-color', config.cheerColor);
+  root.setProperty('--ctc-points-color', config.pointsColor);
+  root.setProperty('--ctc-raid-color', config.raidColor);
+  root.setProperty('--ctc-streak-color', config.streakColor);
+  root.setProperty('--ctc-follow-color', config.followColor);
+  root.setProperty('--ctc-highlight-color', config.highlightColor);
+  root.setProperty('--ctc-first-color', config.firstMsgColor);
+
   ensureLink(
     doc,
     'ctc-google-font',

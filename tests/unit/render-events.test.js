@@ -175,4 +175,27 @@ describe('style, renderer, events, and simulator', () => {
     expect(container.querySelector('.action')).not.toBeNull();
     vi.useRealTimers();
   });
+
+  it('applies event color CSS vars and toggles highlight/first-msg formatting', async () => {
+    const { container, config, router, simulator } = makeHarness({
+      highlightColor: 'rgba(255,0,0,0.4)',
+      firstMsgColor: 'rgba(0,255,0,0.5)',
+      pointsColor: 'rgba(10,20,30,1)',
+    });
+    applyOverlayStyles(document, config);
+    expect(document.documentElement.style.getPropertyValue('--ctc-highlight-color')).toBe('rgba(255,0,0,0.4)');
+    expect(document.documentElement.style.getPropertyValue('--ctc-first-color')).toBe('rgba(0,255,0,0.5)');
+    expect(document.documentElement.style.getPropertyValue('--ctc-points-color')).toBe('rgba(10,20,30,1)');
+
+    await simulator.testHighlight('demo');
+    await simulator.testFirstMsg('demo');
+    expect(container.querySelectorAll('.highlighted')).toHaveLength(1);
+    expect(container.querySelectorAll('.first-badge')).toHaveLength(1);
+
+    router.setConfig({ ...getDefaultConfig(), showHighlights: 'no', showFirstMsg: 'no' });
+    await simulator.testHighlight('demo');
+    await simulator.testFirstMsg('demo');
+    expect(container.querySelectorAll('.highlighted')).toHaveLength(1);
+    expect(container.querySelectorAll('.first-badge')).toHaveLength(1);
+  });
 });
