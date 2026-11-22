@@ -1,5 +1,7 @@
 # Custom Twitch Chat
 
+<img src="public/icon.png" alt="Custom Twitch Chat icon" width="84" align="right">
+
 [![CI](https://github.com/LevyArsOS/custom-twitch-chat/actions/workflows/ci.yml/badge.svg?branch=develop)](https://github.com/LevyArsOS/custom-twitch-chat/actions/workflows/ci.yml)
 [![Deploy GitHub Pages](https://github.com/LevyArsOS/custom-twitch-chat/actions/workflows/pages.yml/badge.svg?branch=main)](https://github.com/LevyArsOS/custom-twitch-chat/actions/workflows/pages.yml)
 [![Release](https://img.shields.io/github/v/release/LevyArsOS/custom-twitch-chat?sort=semver)](https://github.com/LevyArsOS/custom-twitch-chat/releases)
