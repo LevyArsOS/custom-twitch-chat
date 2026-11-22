@@ -1,0 +1,38 @@
+name: Bug Report
+description: Report a problem with the configurator, OBS overlay, or Twitch connection
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: dropdown
+    id: mode
+    attributes:
+      label: Delivery mode
+      options:
+        - GitHub Pages URL (overlay.html#c=1...)
+        - Single local HTML (chat.html)
+        - Local ZIP bundle
+        - Live Preview (index.html)
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: OBS / Browser version
+      placeholder: "e.g. OBS 31.0 / Windows 11"
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: Describe the unexpected behavior clearly.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open configurator...
+        2. Enable option...
+        3. Observe...
+    validations:
+      required: true

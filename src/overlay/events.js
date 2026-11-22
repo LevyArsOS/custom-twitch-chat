@@ -150,13 +150,14 @@ export function createEventRouter({
     }
 
     const extraClasses = [];
-    if (msg.tags['msg-id'] === 'highlighted-message') extraClasses.push('highlighted');
-    if (msg.tags['first-msg'] === '1') extraClasses.push('first-message');
+    if (msg.tags['msg-id'] === 'highlighted-message' && cfg.showHighlights === 'yes') extraClasses.push('highlighted');
+    const isFirst = msg.tags['first-msg'] === '1' && cfg.showFirstMsg === 'yes';
+    if (isFirst) extraClasses.push('first-message');
     await renderFromIrc(msg, {
       tokens: tok.tokens,
       isSoloEmotes: tok.isSoloEmotes,
       extraClasses,
-      isFirstMsg: msg.tags['first-msg'] === '1',
+      isFirstMsg: isFirst,
       replyTo: msg.tags['reply-parent-display-name'] || msg.tags['reply-parent-user-login'] || '',
     });
   }

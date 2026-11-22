@@ -1,5 +1,14 @@
 # Custom Twitch Chat
 
+<img src="public/icon.png" alt="Custom Twitch Chat icon" width="84" align="right">
+
+[![CI](https://github.com/LevyArsOS/custom-twitch-chat/actions/workflows/ci.yml/badge.svg?branch=develop)](https://github.com/LevyArsOS/custom-twitch-chat/actions/workflows/ci.yml)
+[![Deploy GitHub Pages](https://github.com/LevyArsOS/custom-twitch-chat/actions/workflows/pages.yml/badge.svg?branch=main)](https://github.com/LevyArsOS/custom-twitch-chat/actions/workflows/pages.yml)
+[![Release](https://img.shields.io/github/v/release/LevyArsOS/custom-twitch-chat?sort=semver)](https://github.com/LevyArsOS/custom-twitch-chat/releases)
+[![License: MIT](https://img.shields.io/github/license/LevyArsOS/custom-twitch-chat)](LICENSE)
+[![Sponsor](https://img.shields.io/badge/Sponsor-innominata--ltda-ea4aaa?logo=githubsponsors&logoColor=white)](https://github.com/sponsors/innominata-ltda)
+[![Languages: EN | PT-BR](https://img.shields.io/badge/docs-EN%20%7C%20PT--BR-green)](README.pt-BR.md)
+
 *[Leia em Português](README.pt-BR.md)*
 
 Standalone, customizable Twitch chat overlay generator and runtime for OBS Browser Source — built to run directly on GitHub Pages or as a self-contained local HTML/ZIP export without external widget platforms.
@@ -37,3 +46,7 @@ npm run dev          # Build runtime + start Vite dev server
 ./scripts/check      # Content policy scan + Vitest (>= 90% coverage) + full build
 npm run bench        # IRC parse & tokenize throughput benchmark
 ```
+
+## License
+
+[MIT](LICENSE) © 2026 LevyArsOS

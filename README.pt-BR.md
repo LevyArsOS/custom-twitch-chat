@@ -1,5 +1,14 @@
 # Custom Twitch Chat
 
+<img src="public/icon.png" alt="Ícone do Custom Twitch Chat" width="84" align="right">
+
+[![CI](https://github.com/LevyArsOS/custom-twitch-chat/actions/workflows/ci.yml/badge.svg?branch=develop)](https://github.com/LevyArsOS/custom-twitch-chat/actions/workflows/ci.yml)
+[![Deploy GitHub Pages](https://github.com/LevyArsOS/custom-twitch-chat/actions/workflows/pages.yml/badge.svg?branch=main)](https://github.com/LevyArsOS/custom-twitch-chat/actions/workflows/pages.yml)
+[![Release](https://img.shields.io/github/v/release/LevyArsOS/custom-twitch-chat?sort=semver)](https://github.com/LevyArsOS/custom-twitch-chat/releases)
+[![License: MIT](https://img.shields.io/github/license/LevyArsOS/custom-twitch-chat)](LICENSE)
+[![Sponsor](https://img.shields.io/badge/Sponsor-innominata--ltda-ea4aaa?logo=githubsponsors&logoColor=white)](https://github.com/sponsors/innominata-ltda)
+[![Idiomas: EN | PT-BR](https://img.shields.io/badge/docs-EN%20%7C%20PT--BR-green)](README.md)
+
 *[Read in English](README.md)*
 
 Gerador e runtime standalone de chat customizável da Twitch para o OBS Browser Source — feito para rodar direto no GitHub Pages ou como arquivo local (`chat.html` único ou `.zip`), sem depender de plataformas externas como StreamElements.
@@ -37,3 +46,7 @@ npm run dev          # Compila o runtime e inicia o servidor Vite
 ./scripts/check      # Checagem de conteúdo + Vitest (>= 90% cobertura) + build completo
 npm run bench        # Benchmark de throughput de parsing IRC e emotes
 ```
+
+## Licença
+
+[MIT](LICENSE) © 2026 LevyArsOS

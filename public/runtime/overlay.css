@@ -131,18 +131,18 @@ html, body {
 .mention { font-weight: 600; }
 .action { font-style: italic; }
 .reply-context { font-size: 0.78em; opacity: 0.85; margin-bottom: 4px; }
-.first-badge { font-size: 0.7em; opacity: 0.9; margin-right: 6px; padding: 1px 6px; border-radius: 4px; background: rgba(145, 71, 255, 0.45); }
+.first-badge { font-size: 0.7em; opacity: 0.9; margin-right: 6px; padding: 1px 6px; border-radius: 4px; background: var(--ctc-first-color, rgba(145, 71, 255, 0.45)); }
 
 .message-row.streak {
   background: linear-gradient(90deg, rgba(145, 71, 255, 0.25), var(--ctc-msg-bg-color, transparent));
-  border-left: 4px solid #9147ff;
+  border-left: 4px solid var(--ctc-streak-color, #9147ff);
 }
-.message-row.sub-message { border-left: 4px solid #ff9f1c; }
-.message-row.cheer-message { border-left: 4px solid #00e5ff; }
-.message-row.points-message { border-left: 4px solid #2ec4b6; }
-.message-row.raid-message { border-left: 4px solid #ff4d6d; }
-.message-row.follow-message { border-left: 4px solid #80ed99; }
-.message-row.highlighted { background: rgba(117, 94, 188, 0.35); }
+.message-row.sub-message { border-left: 4px solid var(--ctc-sub-color, #ff9f1c); }
+.message-row.cheer-message { border-left: 4px solid var(--ctc-cheer-color, #00e5ff); }
+.message-row.points-message { border-left: 4px solid var(--ctc-points-color, #2ec4b6); }
+.message-row.raid-message { border-left: 4px solid var(--ctc-raid-color, #ff4d6d); }
+.message-row.follow-message { border-left: 4px solid var(--ctc-follow-color, #80ed99); }
+.message-row.highlighted { background: var(--ctc-highlight-color, rgba(117, 94, 188, 0.35)); }
 .message-row.announcement { border-left: 4px solid var(--ctc-announce-color, #9147ff); }
 
 .ctc-auth-card {
